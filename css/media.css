@@ -6,6 +6,19 @@
 }
 
 @media (max-aspect-ratio: 9/11){
-.header-back .item1 a, .header-back .item3 a, .header-back .item5 a, .header-back .item7 a {
-    margin-left: 50%;
+    .view-item{
+        width: 100%;
+    }
+    .ml-10p{
+        margin-left: 20%;
+    }
+    .mr-10p{
+        margin-right: 20%;
+    }
+    .view-item .item:nth-child(3) a ,.view-item .item:nth-child(5) a{
+        margin-left: 50%;
+    }
+    .view-item .item:nth-child(4) a ,.view-item .item:nth-child(6) a{
+        margin-right: 50%;
+    }
 }

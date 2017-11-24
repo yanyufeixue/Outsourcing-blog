@@ -13,12 +13,19 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: #000000;
+}
+/*******
+**点击搜素时显示的输入框
+*****/
+.show-input{
+    background-color: #f4f4f4;
+    color: #000;
+    padding: 0 40px;
 }
 .item-list{
     display: block;
     position: relative;
-    width: 60px;
+    width: 21px;
     height: 100%;
 }
 .item-home-icon::before,.item-home-icon::after{
@@ -27,11 +34,11 @@
     width: 20px;
     height: 2px;
     position: absolute;
-    top: -6px;
+    top: -7px;
     background-color: #ffffff;
 }
 .item-home-icon::after{
-    bottom: -6px;
+    bottom: -7px;
     top: auto;
 }
 .item-home-icon{
@@ -44,6 +51,39 @@
     margin-top: -1px;
     margin-left: -10px;
     background-color: #ffffff;
+}
+
+.go-home,.search-head{
+    display: block;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 40px;
+    top:50%;
+    margin-top: -14px;
+}
+.search-head.user{
+    right: 0px;
+    left: auto;
+}
+.search-head{
+    right: 40px;
+    left: auto;
+}
+.icon-home,.icon-search,.icon-user,.icon-angle-down{
+    color: #ffffff;
+}
+.icon-home{
+    font-size: 24px;
+}
+.icon-search{
+    font-size: 22px;
+}
+.icon-user{
+    font-size: 22px;
+}
+.icon-angle-down{
+    font-size: 32px;   
 }
 .page{
     position: relative;
@@ -99,6 +139,20 @@
 .mr-10p{
     margin-right: 10%;
 }
+.down{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 40px;
+    animation: goDown 2s  infinite linear;
+    cursor: pointer;
+}
+
 @keyframes rotation{
     from{
         transform: rotate(0deg)
@@ -131,5 +185,17 @@
     }
     100%{
         transform: translate3d(0,0,0)
+    }
+}
+
+@keyframes goDown{
+    0%{
+        transform: translate3d(0,-30px,0)
+    }
+    50%{
+        transform: translate3d(0,0,0)
+    }
+    100%{
+        transform: translate3d(0,-30px,0)
     }
 }
