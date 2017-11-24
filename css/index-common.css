@@ -1,0 +1,89 @@
+@charset "utf-8";
+.page{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: hsl(218, 85%, 23%);
+    overflow: hidden;
+}
+.svg-box{
+    width: 100%;
+    height: 100%;
+}
+.starts{
+    background: url("../image/stars.svg");
+    width: 100%;
+    height: 100%;
+    animation: rotation 300s infinite linear;
+}
+#frontsvg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.view-item{
+    width: 70%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.view-item .item{
+    width: 50%;
+    padding: 15px 0;
+    float: left;
+}
+.item img {
+    border-radius: 100%;
+}
+
+.view-item .item:nth-child(2n-1) a{
+    float: left;
+}
+.view-item .item:nth-child(2n) a{
+    float: right;
+}
+.view-item .item  a:hover img{
+    animation: upupdown .5s 2 linear
+}
+.ml-10p{
+    margin-left: 10%;
+}
+.mr-10p{
+    margin-right: 10%;
+}
+@keyframes rotation{
+    from{
+        transform: rotate(0deg)
+    }
+    to
+    {
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes leftOut{
+    0%{
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes upupdown {
+    0%{
+        transform: translate3d(0,0,0)
+    }
+    40%{
+        transform: translate3d(0,-30px,0)
+    }
+    80%{
+        transform: translate3d(0,-15px,0)
+    }
+    100%{
+        transform: translate3d(0,0,0)
+    }
+}

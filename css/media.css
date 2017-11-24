@@ -1,0 +1,11 @@
+@media(max-width:600px){
+    .view-item .item a img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-aspect-ratio: 9/11){
+.header-back .item1 a, .header-back .item3 a, .header-back .item5 a, .header-back .item7 a {
+    margin-left: 50%;
+}
